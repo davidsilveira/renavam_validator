@@ -5,7 +5,9 @@ rvm:
 
 cache: bundler
 
-sudo: false
+os: linux
+
+dist: xenial
 
 before_install:
   - gem install bundler -v '< 2'
