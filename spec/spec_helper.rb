@@ -1,5 +1,7 @@
 # frozen_string_literal: true
 
+require 'simplecov'
+SimpleCov.start
 require 'renavam_validator'
 
 RSpec.configure do |config|
