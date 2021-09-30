@@ -6,13 +6,11 @@ RSpec.describe RenavamValidator do
   end
 
   describe '#valid?' do
-    before do
-      Renavam.valid?(renavam)
-    end
+    subject { Renavam.valid?(renavam) }
 
     context 'when the renavam number is valid' do
       context 'and the param is an integer' do
-        let(:renavam) { 58353474810 }
+        let(:renavam) { 58_353_474_810 }
         it { is_expected.to be_truthy }
       end
 
@@ -24,12 +22,12 @@ RSpec.describe RenavamValidator do
 
     context 'when the renavam number is invalid' do
       context 'and the param is an integer' do
-        let(:renavam) { 53474810 }
-        it { is_expected.to be_falsey }
+        let(:renavam) { 48_353_474_810 }
+        it { is_expected.to be false }
       end
 
       context 'and the param is a string' do
-        let(:renavam) { '474810' }
+        let(:renavam) { '48353474810' }
         it { is_expected.to be_falsey }
       end
     end

@@ -3,15 +3,15 @@
 class Renavam
   attr_reader :renavam
 
-  def initialize(renavam)
-    @renavam = renavam
-  end
-
   def self.valid?(renavam)
     new(renavam).valid?
   end
 
+  def initialize(renavam)
+    @renavam = renavam
+  end
+
   def valid?
-    true
+    Validator.validate(renavam)
   end
 end
