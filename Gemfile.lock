@@ -14,7 +14,7 @@ GEM
     parser (3.2.2.1)
       ast (~> 2.4.1)
     rainbow (3.1.1)
-    rake (13.0.6)
+    rake (13.2.1)
     regexp_parser (2.8.0)
     rexml (3.2.8)
       strscan (>= 3.0.9)
@@ -58,7 +58,7 @@ PLATFORMS
   x86_64-linux-musl
 
 DEPENDENCIES
-  rake (~> 13.0)
+  rake (~> 13.2)
   renavam_validator!
   rspec (~> 3.13)
   rubocop (~> 1.50)
